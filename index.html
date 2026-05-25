@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amin (Mr.PerfecT)</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Orbitron (display) + Syne (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       SCROLL PROGRESS BAR
+  ═══════════════════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══════════════════════════════════
+       PARTICLE CANVAS BACKGROUND
+  ═══════════════════════════════════ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AMP<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"        class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about"       class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education"   class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#skills"      class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"    class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certificates" class="nav-link" data-section="certificates">Certs</a></li>
+        <li><a href="#experience"  class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact"     class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark/Light Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="ri-sun-line" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <!-- Profile image -->
+      <div class="hero-image-wrap reveal-up">
+        <div class="profile-ring"></div>
+        <div class="profile-img-placeholder">
+          <img src="profile_pic.jpg" alt="Amin's Photo" class="profile-img" />
+          <span class="img-hint">Photo</span>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+
+      <div class="hero-text reveal-up" style="animation-delay:.15s">
+        <p class="hero-greeting">Assallam-o-alaikum,👋</p>
+        <h1 class="hero-name">AMIN </h1>
+        <p class="hero-alias"><span class="glow-text">Mr.PerfecT</span></p>
+
+        <!-- Typing effect container -->
+        <div class="hero-typing">
+          <span class="typing-prefix">I am a </span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+
+        <p class="hero-location">
+          <i class="ri-map-pin-2-fill"></i> Karachi, Pakistan &nbsp;·&nbsp;
+          <i class="ri-graduation-cap-fill"></i> FUUAST
+        </p>
+
+        <div class="hero-buttons">
+          <a href="Amin_CV.pdf" target="_blank" class="btn btn-primary" id="downloadCV">
+            <i class="ri-download-cloud-2-line"></i> Download CV
+          </a>
+          <a href="mailto:aminsandofficial@gmail.com" class="btn btn-outline">
+            <i class="ri-mail-send-line"></i> Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="ri-arrow-down-line"></i></div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal-up">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-card glass reveal-left">
+          <div class="about-avatar">
+            <i class="ri-user-star-line"></i>
+          </div>
+          <p class="about-bio">
+             Hi! I'm <strong>Amin</strong>, known online as <strong>Mr.PerfecT</strong>. I'm an undergraduate <strong>BS Computer Science student</strong> at <strong>FUUAST</strong> Karachi, 
+            on a mission to become a cutting-edge <strong>Data Scientist &amp; AI Developer</strong>. 
+            I thrive at the intersection of technology and innovation turning raw data into 
+            intelligent solutions that matter.
+          </p>
+          <p class="about-bio">
+           Whether it's training a neural network, building a data pipeline, or crafting a sleek web
+           interface. I bring curiosity, discipline, and a relentless drive to every project.
+          </p>
+          <div class="about-tags">
+            <span class="tag"><i class="ri-robot-2-line"></i> Data Science</span>
+            <span class="tag"><i class="ri-bar-chart-box-line"></i> AI &amp; Machine Learning</span>
+            <span class="tag"><i class="ri-code-s-slash-line"></i> Programming</span>
+            <span class="tag"><i class="ri-lightbulb-flash-line"></i> Problem Solving</span>
+          </div>
+        </div>
+
+        <div class="about-stats reveal-right">
+          <div class="stat-card glass">
+            <span class="stat-num counter" data-target="2">0</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num counter" data-target="10">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num counter" data-target="5">0</span>
+            <span class="stat-label">Certificates</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num counter" data-target="100">0</span>
+            <span class="stat-label">% Dedication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       EDUCATION SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title reveal-up">My <span class="accent">Education</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2025 — Present</span>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="timeline-inst">
+              <i class="ri-building-4-line"></i>
+              Federal Urdu University of Arts, Science &amp; Technology (FUUAST)
+            </p>
+            <p class="timeline-desc">
+              Studying core CS disciplines including Data Structures, Algorithms, AI, 
+              Databases, and Machine learning models. Actively working on research and 
+              personal AI/Data Science projects.
+            </p>
+            <span class="badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2023 — 2025</span>
+            <h3>Intermediate — Pre-Medical</h3>
+            <p class="timeline-inst">
+              <i class="ri-building-4-line"></i> Board of Intermediate Education, BISE LARKANA
+            </p>
+            <p class="timeline-desc">
+              Completed FSc Pre-Medical with a strong foundation in biology, 
+              Physics, and Chemistry building the analytical mindset, discipline and problem-solving skills that I apply in my programming and AI projects today. This diverse background enhances 
+              my problem-solving approach today.
+            </p>
+            <span class="badge badge-done">Completed</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2021 — 2023</span>
+            <h3>Matriculation — Science</h3>
+            <p class="timeline-inst">
+              <i class="ri-building-4-line"></i> Board of Secondary Education, BISE LARKANA
+            </p>
+            <p class="timeline-desc">
+              Completed Matriculation with a strong foundation in science subjects, 
+              developing critical thinking and analytical skills that I continue to apply in my academic and professional pursuits.
+            </p>
+            <span class="badge badge-done">Completed</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal-up">My <span class="accent">Skills</span></h2>
+      <div class="skills-grid">
+
+        <div class="skills-bars reveal-left">
+          <h3 class="skills-subtitle">Technical Proficiency</h3>
+
+          <div class="skill-item" data-skill="85">
+            <div class="skill-label">
+              <span><i class="ri-html5-line"></i> HTML</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="80">
+            <div class="skill-label">
+              <span><i class="ri-css3-line"></i> CSS</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="60">
+            <div class="skill-label">
+              <span><i class="ri-javascript-line"></i> JavaScript</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="75">
+            <div class="skill-label">
+              <span><i class="ri-code-s-slash-line"></i> Python</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="60">
+            <div class="skill-label">
+              <span><i class="ri-braces-line"></i> DSA</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="72">
+            <div class="skill-label">
+              <span><i class="ri-node-tree"></i> Data Structures</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+
+          <div class="skill-item" data-skill="60">
+            <div class="skill-label">
+              <span><i class="ri-robot-line"></i> AI Basics</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+        </div>
+
+        <!-- Skill Orbs -->
+        <div class="skills-orbs reveal-right">
+          <h3 class="skills-subtitle">Tech Stack</h3>
+          <div class="orbs-grid">
+            <div class="orb glass"><i class="ri-html5-fill"></i><span>HTML</span></div>
+            <div class="orb glass"><i class="ri-css3-fill"></i><span>CSS</span></div>
+            <div class="orb glass"><i class="ri-javascript-fill"></i><span>JavaScript</span></div>
+            <div class="orb glass"><i class="fa-brands fa-python"></i><span>Python</span></div>
+            <div class="orb glass"><i class="fa-solid fa-chart-line"></i><span>Data Science</span></div>
+            <div class="orb glass"><i class="ri-database-2-line"></i><span>SQL</span></div>
+            <div class="orb glass"><i class="ri-github-fill"></i><span>Git</span></div>
+            <div class="orb glass"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+            <div class="orb glass"><i class="ri-robot-2-line"></i><span>AI/ML</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal-up">Featured <span class="accent">Projects</span></h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.1s">
+          <div class="project-icon"><i class="ri-brain-line"></i></div>
+          <span class="project-num">01</span>
+          <h3>AI Chatbot Assistant</h3>
+          <p>A conversational AI chatbot built with Python and NLP libraries that answers user queries intelligently. Trained on custom datasets with intent classification.</p>
+          <div class="project-tech">
+            <span>Python</span><span>NLTK</span><span>Flask</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="#" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.2s">
+          <div class="project-icon"><i class="ri-bar-chart-grouped-line"></i></div>
+          <span class="project-num">02</span>
+          <h3>Data Analysis Dashboard</h3>
+          <p>Interactive data visualization dashboard that processes CSV datasets and generates insightful charts, graphs, and statistical summaries.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="#" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.3s">
+          <div class="project-icon"><i class="ri-shopping-cart-line"></i></div>
+          <span class="project-num">03</span>
+          <h3>E-Commerce Website</h3>
+          <p>Full-featured e-commerce front-end with product listings, cart functionality, search, filters, and responsive design built from scratch.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="#" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.4s">
+          <div class="project-icon"><i class="ri-robot-2-line"></i></div>
+          <span class="project-num">04</span>
+          <h3>Sentiment Analysis system</h3>
+          <p>
+            An AI-powered Sentiment Analysis System developed to analyze and classify user opinions, reviews, and textual feedback into positive, negative, or neutral sentiments. The project utilizes Natural Language Processing (NLP) techniques and machine learning concepts to understand emotional patterns from real-world text data.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>NLP</span><span>Scikit-learn</span><span>Pandas</span><SPan>Machine Learning</SPan><span>Text Analysis</span>
+          </div>
+          <div class="project-links">
+            <a href="https://amin-perfect.github.io/Sentiment-Analysis-Project/" target="_blank" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="https://amin-perfect.github.io/Sentiment-Analysis-Project/" target="_blank" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.5s">
+          <div class="project-icon"><i class="ri-hospital-line"></i></div>
+          <span class="project-num">05</span>
+          <h3>Hospital Management System</h3>
+          <p>
+            A modern and A modern and responsive Hospital Management System designed to streamline healthcare operations digitally.
+            The system manages doctors, patients, appointments, departments, and hospital services through an interactive user-friendly interface with clean UI components and structured management features.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://amin-perfect.github.io/medi-core-HMS/" target="_blank" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="https://amin-perfect.github.io/medi-core-HMS/" target="_blank" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass reveal-up" style="animation-delay:.6s">
+          <div class="project-icon"><i class="ri-weather-cloudy-line"></i></div>
+          <span class="project-num">06</span>
+          <h3>Weather App</h3>
+          <p>Real-time weather application that fetches data from OpenWeatherMap API and displays temperature, humidity, and forecasts with animated icons.</p>
+          <div class="project-tech">
+            <span>JavaScript</span><span>REST API</span><span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="#" class="btn-sm btn-sm-outline"><i class="ri-external-link-line"></i> Live Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CERTIFICATES SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2 class="section-title reveal-up">My <span class="accent">Certificates</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card glass reveal-up" style="animation-delay:.1s">
+          <div class="cert-img-placeholder">
+            <i class="ri-award-line"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Data Science</h3>
+            <p>PITP · NED University Of Engineering And Technology</p>
+            <span class="cert-year">2025 - 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass reveal-up" style="animation-delay:.2s">
+          <div class="cert-img-placeholder">
+            <i class="ri-award-line"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Machine Learning Basics</h3>
+            <p>Google · Crash Course</p>
+            <span class="cert-year">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass reveal-up" style="animation-delay:.3s">
+          <div class="cert-img-placeholder">
+            <i class="ri-award-line"></i>
+          </div>
+          <div class="cert-info">
+            <h3>AI Fundamentals with IBM SkillsBuild</h3>
+            <p>CISCO - Networking Academy</p>
+            <span class="cert-year">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass reveal-up" style="animation-delay:.4s">
+          <div class="cert-img-placeholder">
+            <i class="ri-award-line"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Data Analysis with Python</h3>
+            <p>CISCO - Networking Academy</p>
+            <span class="cert-year">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass reveal-up" style="animation-delay:.5s">
+          <div class="cert-img-placeholder">
+            <i class="ri-award-line"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Introduction to  Modern AI</h3>
+            <p>CISCO - Networking Academy</p>
+            <span class="cert-year">2026</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal-up">My <span class="accent">Experience</span></h2>
+      <div class="exp-grid">
+
+        <div class="exp-card glass reveal-up" style="animation-delay:.1s">
+          <div class="exp-header">
+            <div class="exp-icon"><i class="ri-code-box-line"></i></div>
+            <div>
+              <h3>Data Science Intern</h3>
+              <p class="exp-company">Code Alpha · Remote</p>
+            </div>
+            <span class="exp-date">2025 - present</span>
+          </div>
+          <p class="exp-desc">
+            Working on real-world Data Science and AI-based projects using Python, Pandas, NumPy, and Machine Learning concepts. Gaining hands-on experience in data preprocessing, visualization, model training, and analytical problem solving through practical internship tasks and research-oriented learning..
+          </p>
+          <div class="exp-skills">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Machine Learning</span><span>Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="exp-card glass reveal-up" style="animation-delay:.2s">
+          <div class="exp-header">
+            <div class="exp-icon"><i class="ri-robot-2-line"></i></div>
+            <div>
+              <h3>AI/ML Trainee</h3>
+              <p class="exp-company">Self-Learning · Online</p>
+            </div>
+            <span class="exp-date">2024 – Present</span>
+          </div>
+          <p class="exp-desc">
+            Actively learning Data Science, Machine Learning, & Artificial intelligence through structured 
+            courses and personal projects. Completed 5+ hands-on projects involving real datasets, 
+            model training, and performance evaluation.
+          </p>
+          <div class="exp-skills">
+            <span>Python</span><span>Scikit-learn</span><span>TensorFlow</span><span>Pandas</span>
+          </div>
+        </div>
+
+        <div class="exp-card glass reveal-up" style="animation-delay:.3s">
+          <div class="exp-header">
+            <div class="exp-icon"><i class="ri-team-line"></i></div>
+            <div>
+              <h3>CS Society Member</h3>
+              <p class="exp-company">FUUAST Computer Science Society</p>
+            </div>
+            <span class="exp-date">2025 – Present</span>
+          </div>
+          <p class="exp-desc">
+            Active member of the university CS Society. Organized and participated in hackathons, 
+            coding competitions, and tech seminars. Mentored junior students in programming 
+            fundamentals and Data Science related projects.
+          </p>
+          <div class="exp-skills">
+            <span>Leadership</span><span>Mentoring</span><span>Public Speaking</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal-up">Get In <span class="accent">Touch</span></h2>
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">
+            Have a project idea, collaboration, or just want to say hi? 
+            I'm always open to new opportunities. Let's build something amazing together!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:aminsandofficial@gmail.com" class="contact-link glass">
+              <i class="ri-mail-line"></i>
+              <div>
+                
+                <span class="cl-val">Email</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/amin-mr-perfect-10b2bb344/" target="_blank" class="contact-link glass">
+              <i class="ri-linkedin-box-line"></i>
+              <div>
+                
+                <span class="cl-val">LinkedIn.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Amin-perfect" target="_blank" class="contact-link glass">
+              <i class="ri-github-line"></i>
+              <div>
+                
+                <span class="cl-val">GitHub.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/923359559661" target="_blank" class="contact-link glass">
+              <i class="ri-whatsapp-line"></i>
+              <div>
+                
+                <span class="cl-val">WhatsApp.com</span>
+              </div>
+            </a>
+            <a href="https://web.facebook.com/aa.mr.perfect" target="_blank" class="contact-link glass">
+              <i class="ri-facebook-line"></i>
+              <div>
+                
+                <span class="cl-val">Facebook.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap glass reveal-right">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g John" autocomplete="off" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="ri-send-plane-2-line"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="ri-checkbox-circle-line"></i> Message sent successfully! I'll reply soon.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>AMP<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-tagline">Amin (Mr.PerfecT) · BSCS @ FUUAST</p>
+      <div class="footer-socials">
+        <a href="mailto:aminsandofficial@gmail.com"          aria-label="Email"    class="social-icon"><i class="ri-mail-fill"></i></a>
+        <a href="https://github.com/Amin-perfect"        aria-label="GitHub"   class="social-icon" target="_blank"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/amin-mr-perfect-10b2bb344/"   aria-label="LinkedIn" class="social-icon" target="_blank"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://x.com/MrPerfecT26521"       aria-label="Twitter"  class="social-icon" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+        <a href="https://www.instagram.com/mr.perfect_0.5/"     aria-label="Instagram" class="social-icon" target="_blank"><i class="ri-instagram-line"></i></a>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Amin (Mr.PerfecT). Crafted with <span style="color:var(--accent)">♥</span> in Karachi, Pakistan.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
