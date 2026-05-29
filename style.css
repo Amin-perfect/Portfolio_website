@@ -540,30 +540,74 @@ ul { list-style: none; }
   justify-content: flex-start;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 900px){
+/* MOBILE HERO FIX */
+
+@media(max-width:900px){
 
   .hero-content{
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 3rem;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 1rem;
   }
 
-  .hero-buttons,
-  .hero-location,
-  .hero-typing{
-    justify-content: center;
+  /* TEXT SIDE */
+
+  .hero-text{
+    flex: 1;
+
+    align-items: flex-start;
+    text-align: left;
   }
+
+  /* IMAGE SIDE */
 
   .hero-image-wrap{
-    width: 240px;
-    height: 240px;
+    width: 150px;
+    height: 150px;
+
+    flex-shrink: 0;
   }
 
   .profile-img-placeholder{
-    width: 240px;
-    height: 240px;
-    font-size: 4rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  /* NAME */
+
+  .hero-title{
+    font-size: 2.8rem;
+  }
+
+  /* TYPING */
+
+  .hero-typing{
+    font-size: .9rem;
+  }
+
+  /* BUTTONS */
+
+  .hero-buttons{
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-buttons .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* LOCATION */
+
+  .hero-location{
+    flex-wrap: wrap;
+    gap: .5rem;
   }
 }
 
